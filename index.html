@@ -64,11 +64,19 @@ Based on https://code.google.com/p/io-2012-slides
         <li>Schema.org</li>
         <li>Knowledge Graph</li>
       </ul>
-      <br><br>
+      <p>A także absolwentka SGH i alumn SKN Informatyki :)</p>
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <hgroup>
+      <h2>Będziemy rozmawiać o:</h2>
+    </hgroup>
+    <article>
       <ul>
         <li>Czym są grafy wiedzy i dlaczego ich znaczenie rośnie</li>
         <li>Jak Google zbudował Graf Wiedzy i jakie technologie wykorzystuje</li>
-        <li>Jak deweloperzy mogą na tym skorzystać</li>
+        <li>Jak deweloperzy i biznes mogą na tym skorzystać</li>
       </ul>
     </article>
   </slide>
@@ -137,17 +145,47 @@ Based on https://code.google.com/p/io-2012-slides
     <footer>http://www.ted.com/talks/tim_berners_lee_the_year_open_data_went_worldwide</footer>
   </slide>
 
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <p>
+        "I have a dream for the Web [in which computers] become capable of analyzing all the data on the Web – the content, links, and transactions between people and computers. A "Semantic Web", which makes this possible, has yet to emerge, but when it does, the day-to-day mechanisms of trade, bureaucracy and our daily lives will be handled by machines talking to machines. The "intelligent agents" people have touted for ages will finally materialize."
+      </p>
+      <div class="author">
+        Tim Berners-Lee, 1999<br>
+        W3C
+      </div>
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <hgroup>
+      <h2>Rola SGH i SKN Informatyki:)</h2>
+    </hgroup>
+    <article>
+      <img src="images/skni.jpg" style="position: absolute; top: 0; right: 0;">
+      <h3 style="font-weight: bold;">Realizing added value with semantic web</h3>
+      <p>KŁECZEK Dariusz ; JASKOWSKI Tomasz ; MAŁANIJ Rafał ; ...</p>
+      <p>The Business Case for Semantic Web requires reports on its usefulness in real-life scenarios. In this study we introduce a framework for analysing potential application scenarios of the Semantic Web, which is based on the concept of added value. Based on this analysis, we have formulated a hypothetical life cycle of Semantic Web technologies in corporate IT infrastructures. It identifies corporate knowledge management as the application area, where a killer application is most likely to be developed. As a proof of concept the design, deployment and evaluation of a Skills Management system is presented.</p>
+      <p>Opublikowany przez Springer</p>
+      <p>OTM Confederated International Conferences, Agia Napa, CYP, 2005-10-31</p>
+
+      <a href="http://www.refdoc.fr/Detailnotice?cpsidt=17344843&traduire=en">ISSN : 0302-9743 ISBN : 3-540-29739-1</a>
+    </article>
+  </slide>
+
   <slide class="fill">
     <hgroup>
       <h2>Graf Wiedzy Google składa się z milionów faktów</h2>
     </hgroup>
     <article>
-      <p>Do opisu grafu służy standard RDF (Resource Description Framework)</p>
+      <p>Do opisu grafu służy standard <strong>RDF</strong> (Resource Description Framework)</p>
       <ul>
-        <li>Każdy fakt to tzw "trójka semantyczna":
+        <li>Każdy fakt to tzw <strong>"trójka semantyczna"</strong>:
           <ul><li>Podmiot - predykat - obiekt</li></ul>
         </li>
       </ul>
+      <img src="images/triple.png">
     </article>
   </slide>
 
@@ -169,12 +207,12 @@ Based on https://code.google.com/p/io-2012-slides
     <h2>Skąd się biorą fakty w Grafie Wiedzy?</h2>
   </hgroup>
   <article>
-    <p></p>
     <ul>
       <li>Gafowe bazy danych - Freebase</li>
       <li>Strony internetowe z semantycznym markupem</li>
       <li>Inne dokumenty, np email</li>
     </ul>
+    <img src="images/sources.png">
     <p>Każdy dokument, który może być zinterpretowany <strong>maszynowo</strong>.</p>
   </article>
 </slide>
@@ -232,6 +270,9 @@ Based on https://code.google.com/p/io-2012-slides
     </article>
     <aside class="note">
       <section>
+      Over 15% of all sites/pages now have schema.org
+      Over 5 million sites, over 25 billion entity references
+
       </section>
     </aside>
   </slide>
@@ -320,8 +361,95 @@ Based on https://code.google.com/p/io-2012-slides
         <li><strong>Standardowe formaty</strong></li>
       </ul>
       <img src="images/formats.png" style="margin-top:20px">
-      <p><a href="http://schema-tools.appspot.com/Movie">Przykład - Movie</a></p>
-      <p><a href="http://www.imdb.com/title/tt0133093/?ref_=fn_al_tt_1">Przykład - IMDB</a></p>
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <hgroup>
+      <h2>Przykład: Film</h2>
+    </hgroup>
+    <article>
+    <div>
+      <h1>Pirates of the Carribean: On Stranger Tides (2011)</h1>
+      <div style="margin-top: 20px; font-style:italic;">Jack Sparrow and Barbossa embark on a quest...</div>
+      <div style="margin-top: 20px;">
+         Director:
+         <span style="font-weight: bold;">Rob Marshall</span>
+      </div>
+      <div style="margin-top: 20px;">
+         Stars:
+         <span style="font-weight: bold;">Johnny Depp</span>,
+      </div>
+      <div style="margin-top: 20px;">
+        Rating:
+        <span style="font-weight: bold;">8</span>
+      </div>
+    </div>
+
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <hgroup>
+      <h2>Przykład: Film - HTML</h2>
+    </hgroup>
+    <article>
+    <pre class="prettyprint" data-lang="html">&lt;div&gt;<br/>  &lt;h1&gt;Pirates of the Carribean: On Stranger Tides (2011)&lt;/h1&gt;<br/>  &lt;span&gt;Jack Sparrow and Barbossa embark on a quest...&lt;/span&gt;<br/>  Director:<br/>  &lt;div&gt;<br/>     &lt;span&gt;Rob Marshall&lt;/span&gt;<br/>  &lt;/div&gt;<br/>  Stars:<br/>  &lt;div&gt;<br/>     &lt;span&gt;Johnny Depp&lt;/span&gt;,<br/>  &lt;/div&gt;<br/>  Rating:<br/>  &lt;div&gt;<br/>    &lt;span&gt;8&lt;/span&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;
+    </pre>
+
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <hgroup>
+      <h2>Przykład: Film - HTML + RDFa</h2>
+    </hgroup>
+    <article>
+
+
+    <pre class="prettyprint" data-lang="html">&lt;div vocab=&quot;http://schema.org/&quot; typeof=&quot;Movie&quot;&gt;<br/>  &lt;h1 property=&quot;name&quot;&gt;Pirates of the Carribean: On Stranger Tides (2011)&lt;/h1&gt;<br/>  &lt;span property=&quot;description&quot;&gt;Jack Sparrow and Barbossa embark on a quest...&lt;/span&gt;<br/>  Director:<br/>  &lt;div typeof=&quot;Person&quot; property=&quot;director&quot;&gt;<br/>     &lt;span property=&quot;name&quot;&gt;Rob Marshall&lt;/span&gt;<br/>  &lt;/div&gt;<br/>  Stars:<br/>  &lt;div typeof=&quot;Person&quot; property=&quot;actor&quot;&gt;<br/>     &lt;span property=&quot;name&quot;&gt;Johnny Depp&lt;/span&gt;,<br/>  &lt;/div&gt;<br/>  &lt;div typeof=&quot;AggregateRating&quot; property=&quot;aggregateRating&quot;&gt;<br/>    &lt;span property=&quot;ratingValue&quot;&gt;8&lt;/span&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;
+    </pre>
+
+    </article>
+  </slide>
+
+
+  <slide class="fill">
+    <hgroup>
+      <h2>Przykład: Film - HTML + Microdata</h2>
+    </hgroup>
+    <article>
+
+
+    <pre class="prettyprint" data-lang="html">&lt;div itemscope itemtype=&quot;http://schema.org/Movie&quot;&gt;<br/>  &lt;h1 itemprop=&quot;name&quot;&gt;Pirates of the Carribean: On Stranger Tides (2011)&lt;/h1&gt;<br/>  &lt;span itemprop=&quot;description&quot;&gt;Jack Sparrow and Barbossa embark on a quest... &lt;/span&gt;<br/>  Director:<br/>  &lt;div itemprop=&quot;director&quot; itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;<br/>    &lt;span itemprop=&quot;name&quot;&gt;Rob Marshall&lt;/span&gt;<br/>  &lt;/div&gt;<br/>  Stars:<br/>  &lt;div itemprop=&quot;actor&quot; itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;<br/>    &lt;span itemprop=&quot;name&quot;&gt;Johnny Depp&lt;/span&gt;,<br/>  &lt;/div&gt;<br/>  &lt;div itemprop=&quot;aggregateRating&quot; itemscope itemtype=&quot;http://schema.org/AggregateRating&quot;&gt;<br/>    &lt;span itemprop=&quot;ratingValue&quot;&gt;8&lt;/span&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;
+    </pre>
+
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <hgroup>
+      <h2>Przykład: Film - HTML + JsonLd</h2>
+    </hgroup>
+    <article>
+
+
+    <pre class="prettyprint" data-lang="html">&lt;script type=&quot;application/ld+json&quot;&gt;<br/>{<br/>  &quot;@context&quot;: &quot;http://schema.org&quot;, <br/>  &quot;@type&quot;: &quot;Movie&quot;, <br/>  &quot;name&quot;: &quot;Pirates of the Carribean: On Stranger Tides (2011)&quot;<br/>  &quot;description&quot;: &quot;Jack Sparrow and Barbossa embark on a quest...&quot;, <br/>  &quot;director&quot;: {<br/>    &quot;@type&quot;: &quot;Person&quot;, <br/>    &quot;name&quot;: &quot;Rob Marshall&quot;<br/>  }, <br/>  &quot;actor&quot;: {<br/>      &quot;@type&quot;: &quot;Person&quot;, <br/>      &quot;name&quot;: &quot;Johnny Depp&quot;<br/>    }, <br/>  &quot;aggregateRating&quot;: {<br/>    &quot;@type&quot;: &quot;AggregateRating&quot;,<br/>    &quot;ratingValue&quot;: &quot;8&quot;<br/>  }<br/>}<br/>&lt;/script&gt;
+    </pre>
+
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <hgroup>
+      <h2>Przykład: IMDB</h2>
+    </hgroup>
+    <article>
+
+
+    <p><a href="http://schema-tools.appspot.com/Movie">Przykład - Movie</a></p>
+    <p><a href="http://www.imdb.com/title/tt0133093/?ref_=fn_al_tt_1">Przykład - IMDB</a></p>
+
     </article>
   </slide>
 
@@ -420,7 +548,7 @@ Based on https://code.google.com/p/io-2012-slides
 
     <slide class="fill">
       <hgroup>
-        <h2>Reference</h2>
+        <h2>Wysyłaj zapytania do Grafu Wiedzy</h2>
       </hgroup>
       <article>
         <iframe src="http://suggest-examples.freebaseapps.com/"></iframe>
@@ -484,7 +612,7 @@ Based on https://code.google.com/p/io-2012-slides
       <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
       <article class="flexbox vleft auto-fadein">
         <h2>&lt;Dziękuję!&gt;</h2>
-        <p><a style="color:#fff;" href="http://devnook.github.io/WomenTechmakers2014">devnook.github.io/WomenTechmakers2014</a><br>
+        <p><a style="color:#fff;" href="http://devnook.github.io/InspiringSolutions2014">devnook.github.io/InspiringSolutions2014</a><br>
         </article>
         <p class="auto-fadein" data-config-contact>
           <!-- populated from slide_config.json -->
@@ -496,17 +624,7 @@ Based on https://code.google.com/p/io-2012-slides
   </slides>
 
 
-      <script>
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
-        _gaq.push(['_trackPageview']);
 
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-      </script>
 
 <!--[if IE]>
   <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>

@@ -4,8 +4,8 @@ var SLIDE_CONFIG = {
     title: 'Graf Wiedzy Google',
     subtitle: 'Semantyczne tagi i internet przyszłości',
     eventInfo: {
-      title: 'Women Techmakers Kraków',
-      date: '20/03/2014'
+      title: 'Inspiring Solutions, SGH Warszawa',
+      date: '26/03/2014'
     },
     useBuilds: true, // Default: true. False will turn off slide animation builds.
     usePrettify: true, // Default: true
